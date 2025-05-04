@@ -1,8 +1,10 @@
 /* eslint-disable no-var */
 import mongoose, { Mongoose } from 'mongoose';
 
-const MONGODB_URI: string = 'mongodb://localhost:27017/finance-visualizer';
+const MONGODB_URI: string = process.env.MONGOuRL ?? '';
 
+console.log("kar")
+console.log(process.env.MONGOuRL)
 if (!MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable');
 }
